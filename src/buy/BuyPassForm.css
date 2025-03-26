@@ -1,0 +1,148 @@
+/* ---- Form Container ---- */
+.container-BuyPassForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #0d0d0d; /* Deep Black */
+  }
+  
+  /* ---- Form Wrapper ---- */
+  .formWrapper-BuyPassForm {
+    background: rgba(255, 255, 255, 0.04); /* Subtle glass effect */
+    backdrop-filter: blur(12px);
+    padding: 36px;
+    border-radius: 14px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* ---- Subtle Crown Icon ---- */
+  .crownIcon-BuyPassForm {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    opacity: 0.9;
+  }
+  
+  /* ---- Title & Subtitle ---- */
+  .title-BuyPassForm {
+    font-size: 24px;
+    font-weight: 600;
+    color: #c8af70; /* Matte Gold */
+    margin-bottom: 6px;
+  }
+  
+  .subtitle-BuyPassForm {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 18px;
+  }
+  
+  /* ---- Premium Divider ---- */
+  .divider-BuyPassForm {
+    width: 85%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 16px auto;
+  }
+  
+  /* ---- Input Groups ---- */
+  .inputGroup-BuyPassForm {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  
+  .label-BuyPassForm {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .input-BuyPassForm {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  .input-BuyPassForm:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #c8af70;
+    box-shadow: none;
+  }
+  
+  /* ---- Membership Plan Box ---- */
+  .plan-BuyPassForm {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .plan-BuyPassForm span {
+    font-weight: 600;
+    color: #c8af70; /* Matte Gold */
+    font-size: 18px;
+  }
+  
+  .planSubtext-BuyPassForm {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+  }
+  
+  /* ---- Submit Button ---- */
+  .submitBtn-BuyPassForm {
+    width: 100%;
+    background: linear-gradient(90deg, #c8af70, #e3d8b4);
+    color: black;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .submitBtn-BuyPassForm:hover {
+    background: linear-gradient(90deg, #e3d8b4, #c8af70);
+    transform: scale(1.02);
+  }
+  
+  /* ---- Mobile Responsiveness ---- */
+  @media (max-width: 480px) {
+    .formWrapper-BuyPassForm {
+      padding: 28px;
+    }
+  
+    .title-BuyPassForm {
+      font-size: 22px;
+    }
+  
+    .input-BuyPassForm {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .submitBtn-BuyPassForm {
+      padding: 14px;
+      font-size: 14px;
+    }
+  }
+  

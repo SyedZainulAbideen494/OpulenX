@@ -1,0 +1,111 @@
+/* Prestige Section Container */
+.prestige-container-PrestigeSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 1) 100%);
+  filter: brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+/* Apple-like Glassmorphism Effect */
+.prestige-content-PrestigeSection {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light frosted effect */
+  backdrop-filter: blur(15px); /* Soft blur for glass-like look */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title Styling - Apple Minimalist */
+.prestige-title-PrestigeSection {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp-PrestigeSection 1.8s ease-out forwards;
+}
+
+/* Subtitle Styling - Apple Style */
+.prestige-subtitle-PrestigeSection {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: fadeInUp-PrestigeSection 1.8s ease-out 0.5s forwards;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Button Styling */
+.cta-container-PrestigeSection {
+  margin-top: 35px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp-PrestigeSection 1.8s ease-out 1s forwards;
+}
+
+.cta-button-PrestigeSection {
+  padding: 18px 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 35px;
+  cursor: pointer;
+  text-transform: uppercase;
+  min-width: 250px;
+  border: none;
+  letter-spacing: 1.2px;
+  background: #ffffff; /* White button */
+  color: #000000; /* Black text */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects for Button */
+.cta-button-PrestigeSection:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp-PrestigeSection {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .prestige-container-PrestigeSection {
+      padding: 60px 5%;
+  }
+
+  .prestige-title-PrestigeSection {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .prestige-subtitle-PrestigeSection {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+  }
+
+  .cta-button-PrestigeSection {
+      width: 100%;
+      max-width: 320px;
+  }
+}

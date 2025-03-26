@@ -1,0 +1,111 @@
+/* Elite Theme */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #000000, #1a1a1a);
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 40px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Highlighted Name */
+.highlight {
+  color: #f5c518;
+  font-style: italic;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* Storytelling Section */
+.story {
+  font-size: 16px;
+  opacity: 0.85;
+  font-style: italic;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Info Section */
+.info p {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Info Hover Effect */
+.info p:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Elite Message */
+.elite-text {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Button */
+.button {
+  background: white;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.button:hover {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

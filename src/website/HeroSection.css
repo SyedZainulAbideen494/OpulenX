@@ -1,0 +1,183 @@
+/* Root Variables */
+:root {
+    --black-bg: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --text-color: #fff;
+    --highlight: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --spacing: 60px;
+    --font-primary: 'SF Pro Display', sans-serif;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Container */
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 10%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 1) 100%);
+    filter: brightness(0.75);
+    min-height: 120vh;  /* Allow content to stretch beyond the viewport */
+    padding-bottom: 20px;  /* Ensure there’s padding at the bottom */
+}
+
+/* Hero Content (no height restriction) */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: var(--spacing);
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 60px var(--shadow-dark);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;  /* Add margin to ensure spacing */
+}
+
+/* Scroll Enablement */
+body {
+    overflow-y: auto;  /* Ensure vertical scrolling */
+}
+
+
+/* Background with subtle blur effect */
+.hero-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0.7) 70%);
+    z-index: 0;
+    filter: blur(8px);
+}
+
+
+
+/* Hero Title */
+.hero-title {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 700;
+    color: var(--highlight);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1.8s ease-out forwards;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeInUp 1.8s ease-out 0.6s forwards;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.8s ease-out 1s forwards;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    padding: 16px 38px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    min-width: 250px;
+    border: none;
+    letter-spacing: 1.2px;
+    box-shadow: 0 6px 14px var(--shadow-light);
+}
+
+/* "Find the Elite" Button */
+.find-elite {
+    background: var(--highlight);
+    color: var(--black-bg);
+}
+
+.find-elite:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-7px);
+    box-shadow: 0 0 30px var(--shadow-light);
+}
+
+/* "Claim Your Status" Button */
+.claim-status {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    color: var(--text-color);
+    border: 1px solid var(--glass-border);
+}
+
+.claim-status:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-7px);
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 0 5%;
+    }
+
+    /* Hero Section Container */
+.hero-container {
+    min-height: 100vh;  /* Allow content to stretch beyond the viewport */
+}
+
+    .hero-content {
+        padding: var(--spacing) 20px;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+

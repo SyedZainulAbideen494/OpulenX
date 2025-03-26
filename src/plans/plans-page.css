@@ -1,0 +1,178 @@
+/* Hero Section Container */
+.hero-container-plans-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 10%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 1) 100%);
+    filter: brightness(0.75);
+    min-height: 120vh;
+    padding-bottom: 20px;
+}
+
+/* Hero Content */
+.hero-content-plans-page {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Hero Title */
+.hero-title-plans-page {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1.8s ease-out forwards;
+}
+
+/* Hero Subtitle */
+.hero-subtitle-plans-page {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fadeInUp 1.8s ease-out 0.6s forwards;
+}
+
+/* Carousel Container for Plan Cards */
+.plan-carousel-container-plans-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    padding: 0 10%;
+}
+
+/* Left and Right Arrows */
+.carousel-arrow-plans-page {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease;
+}
+
+.carousel-arrow-plans-page:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Plan Card Container (Wrapping the Plan Card for Animation) */
+.plan-card-container-plans-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Plan Card */
+.plan-card-plans-page {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Plan Card Hover Effect */
+.plan-card-plans-page:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.plan-card-header-plans-page h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.premium-highlight-plans-page {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.plan-card-footer-plans-page {
+    margin-top: 30px;
+}
+
+.button-plans-page {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    background: #fff;
+    color: #0a0a0a;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-plans-page:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-container-plans-page {
+        padding: 0 5%;
+    }
+
+    .hero-content-plans-page {
+        padding: 40px;
+    }
+
+    .hero-title-plans-page {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+    .plan-carousel-container-plans-page {
+        flex-direction: row;
+    }
+
+    .carousel-arrow-plans-page {
+        font-size: 1rem;
+    }
+
+    .plan-card-container-plans-page {
+        width: 80%;
+    }
+}
