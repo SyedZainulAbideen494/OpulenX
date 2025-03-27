@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const SuccessPageFake = () => {
   const location = useLocation();
-  const { name } = 'Matthew Hayes';
+  const { name } = location.state || { name: "Matthew Hayes" }; // Use fallback in case name isn't passed
 
   const cardRef = useRef(null);
 
@@ -22,13 +22,13 @@ const SuccessPageFake = () => {
   return (
     <div style={styles.container}>
       <div ref={cardRef} style={styles.card}>
-      <h1 style={styles.title}>Power. Respect. Legacy. Welcome, {name}.</h1>
-      <p style={styles.subtext}>
-  <b>Money can be lost.</b> <br />
-  <b>Power can be taken.</b> <br />
-  But <b>respect?</b> That stays. <br />
-  And now, {name}, it’s yours.
-</p>
+        <h1 style={styles.title}>Power. Respect. Legacy. Welcome, {name}.</h1>
+        <p style={styles.subtext}>
+          <b>Money can be lost.</b> <br />
+          <b>Power can be taken.</b> <br />
+          But <b>respect?</b> That stays. <br />
+          And now, {name}, it’s yours.
+        </p>
 
         <div style={styles.divider}></div>
 
