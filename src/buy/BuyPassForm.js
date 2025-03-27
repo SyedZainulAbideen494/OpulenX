@@ -101,7 +101,7 @@ const BuyPassForm = () => {
 
           {/* ---- Membership Plan ---- */}
           <div className="plan-BuyPassForm">
-            <p>Elite Membership – <span>₹4999</span></p>
+            <p>Elite Membership – <span>₹1999</span></p>
             <p className="planSubtext-BuyPassForm">Unmatched prestige. Unquestionable exclusivity.</p>
           </div>
 

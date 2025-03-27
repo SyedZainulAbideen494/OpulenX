@@ -14,13 +14,15 @@ import PlansPage from "./plans/PlansPage";
 import BuyPassForm from "./buy/BuyPassForm";
 import SuccessPage from "./buy/SuccessPage";
 import SearchElitePass from "./search/serach";
+import SuccessPageFake from "./buy/fake-ig-pass";
 
 
 const router = createBrowserRouter([
   { path: '*', element: <Website /> },
   {path: '/search', element: <SearchElitePass/>},
   {path: '/join-elite', element: <BuyPassForm/>},
-  {path: '/success', element: <SuccessPage/>}
+  {path: '/success', element: <SuccessPage/>},
+  {path: '/fake-ig-pass-ig-ig-ig-reel-to-upload', element: <SuccessPageFake/>}
 ]);
 
 
